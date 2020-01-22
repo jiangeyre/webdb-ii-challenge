@@ -1,8 +1,9 @@
-const server = require('./server');
+const express = require('express');
 
-const Host = process.env.HOST || 'localhost';
-const Port = process.env.PORT || 8000;
+const server = express();
 
-server.listen(Host, Port, () => {
-    console.log(`\n ** Running on port: ${Port}... ** \n`);
+const port = process.env.PORT || 8000;
+
+server.listen(port, () => {
+    console.log(`\n ** Running on port: ${port}... ** \n`)
 });
